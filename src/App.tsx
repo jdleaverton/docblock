@@ -100,7 +100,14 @@ function App() {
 
   return (
     <div className="container">
-      <a href="/" className="title-link">
+      <a 
+        href="#" 
+        className="title-link"
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href = window.location.pathname; // Refreshes the current page without changing the path
+        }}
+      >
         <h1 className="title" title="Putting the sass back in SaaS">✋ DocBlock</h1>
       </a>
       <h2 className="subtitle">Check if your DocSend documents have embedded trackers. Copy and paste your text below.</h2>
